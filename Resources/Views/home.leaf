@@ -10,7 +10,8 @@
         }
 
         #if(names) {
-            <h1>Names:</h1>
+            <h1>There are #count(names) names</h1>
+            <h2>Names:</h2>
             <ul>
                 #for(name in names) {
                     #if(isFirst) {
