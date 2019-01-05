@@ -11,6 +11,7 @@
 
         #if(names) {
             <h1>There are #count(names) names</h1>
+            <p>Names are #join(names, ", ")</p>
             <h2>Names:</h2>
             <ul>
                 #for(name in names) {

@@ -17,4 +17,7 @@ public func configure(
     // Configure the rest of your application here
     try services.register(LeafProvider())
     config.prefer(LeafRenderer.self, for: ViewRenderer.self)
+    var tags = LeafTagConfig.default()
+    tags.use(JoinTag(), as: "join")
+    services.register(tags)
 }
