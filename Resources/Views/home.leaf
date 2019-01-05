@@ -9,5 +9,13 @@
             <p>Fakers are #(fakers).</p>
         }
 
+        #if(names) {
+            <h1>Names:</h1>
+            <ul>
+                #for(name in names) {
+                    <li>#(name)</li>
+                }
+            </ul>
+        }
     </body>
 </html>
