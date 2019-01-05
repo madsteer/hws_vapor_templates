@@ -1,0 +1,13 @@
+<html>
+    <body>
+
+        #if(haters) {
+            <p>Haters are #(haters).</p>
+        }
+
+        #if(fakers) {
+            <p>Fakers are #(fakers).</p>
+        }
+
+    </body>
+</html>
