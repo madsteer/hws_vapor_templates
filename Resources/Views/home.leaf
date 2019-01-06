@@ -1,4 +1,7 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="/styles/stripe.css" >
+    </head>
     <body>
 
         #if(haters) {
@@ -16,11 +19,11 @@
             <ul>
                 #for(name in names) {
                     #if(isFirst) {
-                        <li>The first name is #(name)</li>
+                        #zebra(name, index, "The first name is NAME")
                     } else if (isLast) {
-                        <li>The last name is #(name)</li>
+                        #zebra(name, index, "The last name is NAME")
                     } else {
-                        <li>Name number #(index) is #(name)</li>
+                        #zebra(name, index, "Name number INDEX is NAME")
                     }
                 }
             </ul>

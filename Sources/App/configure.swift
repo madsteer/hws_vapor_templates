@@ -19,5 +19,11 @@ public func configure(
     config.prefer(LeafRenderer.self, for: ViewRenderer.self)
     var tags = LeafTagConfig.default()
     tags.use(JoinTag(), as: "join")
+    tags.use(ZebraTag(), as: "zebra")
     services.register(tags)
+
+    var middleware = MiddlewareConfig.default()
+    middleware.use(FileMiddleware.self) // Serves files from the `Public/` directory
+    middleware.use(ErrorMiddleware.self) // converts errors to HTTP responses
+    services.register(middleware)
 }
